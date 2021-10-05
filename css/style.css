@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+body{
+  background-color:#edf9f1; 
+}
+
 .navbar-brand{
 font-family: Acme;
 }
@@ -24,4 +28,5 @@ font-family: Acme;
 
  .card{
    border-color: transparent !important;
+   background-color:transparent !important;
  }
