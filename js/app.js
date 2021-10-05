@@ -14,7 +14,6 @@ let coffees = [];
 
 
 const showCoffees = (result) => {
-console.log(result);
   if (result.message == null) {
      console.log('La conexion fallo intenten mas tarde');
   } else {
