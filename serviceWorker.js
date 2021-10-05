@@ -1,4 +1,4 @@
-const nameCache = "Elephnats";
+const nameCache = "AdoptDog";
 const assets = [
   "/",
   "/index.html",
@@ -10,7 +10,7 @@ const assets = [
   "/js/jquery.js",
   "/js/party.js",
   "/js/bootstrap.bundle.min.js",
-]
+];
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
@@ -18,7 +18,8 @@ self.addEventListener("install", installEvent => {
       cache.addAll(assets)
     })
   )
-})
+  self.skipWaiting();
+});
 
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
@@ -26,6 +27,6 @@ self.addEventListener("fetch", fetchEvent => {
         return res || fetch(fetchEvent.request);
       })
     )
-  })
+  });
 ;
 
