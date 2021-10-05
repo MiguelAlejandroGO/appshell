@@ -4,7 +4,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://dog.ceo/api/breed/akita/images/random/20", requestOptions)
+fetch("https://dog.ceo/api/breeds/image/random/21", requestOptions)
   .then(response => response.json())
   .then(result => showCoffees(result))
   .catch(error => console.log('error', error));
@@ -14,7 +14,7 @@ let coffees = [];
 
 
 const showCoffees = (result) => {
-
+console.log(result);
   if (result.message == null) {
      console.log('La conexion fallo intenten mas tarde');
   } else {
@@ -27,7 +27,7 @@ const showCoffees = (result) => {
             <div class="card">
             <img src=${result.message[i]} class="card-img-top" alt="...">
                 <div class="card-body">
-                   <a class="btn btn-info" href="#">Adoptame</a>
+                   <div class="button btn btn-info" onmousedown="party.confetti(this)">Adoptame!</div>
                 </div>
            </div>
      

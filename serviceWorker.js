@@ -4,9 +4,11 @@ const assets = [
   "/index.html",
   "/css/style.css",
   "/css/bootstrap.min.css",
+  "/images/dog_icon.svg",
   "/js/app.js",
   "/js/main.js",
   "/js/jquery.js",
+  "/js/party.js",
   "/js/bootstrap.bundle.min.js",
 ]
 

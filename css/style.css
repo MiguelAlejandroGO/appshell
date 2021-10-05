@@ -16,3 +16,12 @@ font-family: Acme;
   border-color: #339889 !important;
  }
  
+ .nav-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .card{
+   border-color: transparent !important;
+ }
