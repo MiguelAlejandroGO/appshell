@@ -1,7 +1,7 @@
 
   {
-  "name":"Elephants PWA",
-  "short_name" : "Elephants",
+  "name":"Adopta un Dog",
+  "short_name" : "AdoptaUnDog",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
