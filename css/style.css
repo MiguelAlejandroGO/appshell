@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.navbar-brand{
+font-family: Acme;
+}
+
+.btn-info {
+  color: white !important;
+  font-weight: bold!important;
+  border-radius: 4px!important;
+  padding: 10px !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  background-color:#339889  !important;
+  border-color: #339889 !important;
+ }
+ 
