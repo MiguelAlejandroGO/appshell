@@ -9,10 +9,6 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/images/icons/icon-64x64.png",
-      "type": "image/png", "sizes": "64x64"
-    },
-    {
       "src": "/images/icons/icon-72x72.png",
       "type": "image/png", "sizes": "72x72"
     },
