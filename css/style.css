@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 body{
-  background-color:#edf9f1; 
+  background-color:#ffffff; 
 }
 
 .navbar-brand{
@@ -16,8 +16,8 @@ font-family: Acme;
   font-size: 1rem !important;
   display: flex !important;
   justify-content: center !important;
-  background-color:#e7e7e7  !important;
-  border-color: #e7e7e7!important;
+  background-color:#339889  !important;
+  border-color: #339889 !important;
  }
  
  .nav-logo{
