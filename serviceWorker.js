@@ -5,6 +5,7 @@ const _assets = [
   "/css/style.css",
   "/css/bootstrap.min.css",
   "/images/dog_icon.svg",
+  "/images/alert-dog.png",
   "/js/app.js",
   "/js/main.js",
   "/js/jquery.js",
