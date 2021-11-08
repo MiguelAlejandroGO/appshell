@@ -1,5 +1,5 @@
-const nameCache = "AdoptDog";
-const assets = [
+const cacheName = "AdoptDogv4";
+const _assets = [
   "/",
   "/index.html",
   "/css/style.css",
@@ -12,21 +12,38 @@ const assets = [
   "/js/bootstrap.bundle.min.js",
 ];
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(nameCache).then(cache => {
-      cache.addAll(assets)
-    })
-  )
-  self.skipWaiting();
+self.addEventListener("install", (installEvent) => {
+  const _app_shell = caches
+    .open(cacheName)
+    .then((cache) => cache.addAll(_assets));
+
+  installEvent.waitUntil(_app_shell);
+
 });
 
-self.addEventListener("fetch", fetchEvent => {
-    fetchEvent.respondWith(
-      caches.match(fetchEvent.request).then(res => {
-        return res || fetch(fetchEvent.request);
-      })
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys.map((key) => {
+          if (!cacheName.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      )
     )
-  });
-;
+  );
+});
 
+self.addEventListener("fetch", (fetchEvent) => {
+  fetchEvent.respondWith(
+    caches.match(fetchEvent.request).then((res) => {
+      return (
+        res ||
+        fetch(fetchEvent.request).catch((error) =>
+          console.log("Error en la peticion")
+        )
+      );
+    })
+  );
+});

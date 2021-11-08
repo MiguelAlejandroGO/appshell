@@ -6,17 +6,18 @@ var requestOptions = {
 
 fetch("https://dog.ceo/api/breeds/image/random/21", requestOptions)
   .then(response => response.json())
-  .then(result => showCoffees(result))
-  .catch(error => console.log('error', error));
+  .then(result => showDogs(result))
+  .catch(error => console.log('La conexion con el servicio fallo'));
+
 
 container = document.querySelector(".container")
-let coffees = [];
+const alert_content = document.querySelector("#alert-content");
 
-
-const showCoffees = (result) => {
-  if (result.message == null) {
-     console.log('La conexion fallo intenten mas tarde');
+const showDogs = (result) => {
+  if (result == "" || result == null ){
+      Console.log('La conexion con el servicio fallo');
   } else {
+    alert_content.classList.add("d-none");
     for (let i = 0; i < result.message.length; i++) {
       const movieElement = document.createElement('div');
       movieElement.classList.add('col');
