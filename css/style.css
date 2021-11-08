@@ -30,3 +30,16 @@ font-family: Acme;
    border-color: transparent !important;
    background-color:transparent !important;
  }
+
+ .alert-content{
+  display: flex;
+  justify-content: center;
+  font-family: Arial;
+  font-weight: bold;
+ }
+
+ .alert-content h5{
+  padding: 50px 5px 20px 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
