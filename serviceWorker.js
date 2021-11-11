@@ -1,4 +1,3 @@
-//const cacheName = "AdoptDogv1.14";
 
 let staticCache = 'staticCache_v1';
 let dynamicCache = 'dynamicCache_v1';
@@ -10,7 +9,7 @@ const _staticFiles = [
   "/images/dog_icon.svg",
   "/images/alert-dog.png",
   "/css/style.css",
-  "/js/app.js",
+  "/js/main.js",
 ];
 
 const _immutableFiles = [
