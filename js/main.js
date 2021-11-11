@@ -17,42 +17,32 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-
 function showSnackbarUpdate() {
   let x = document.getElementById("snackbar");
   x.className = "show";
 }
-
 let lauchUpdate = document.getElementById("lauchUpdate");
-
 lauchUpdate.addEventListener("click", () => {
   newServiceWorker.postMessage({
     action: "skipWaiting",
   });
   window.location.reload();
 });
-
 var requestOptions = {
   method: "GET",
   redirect: "follow",
 };
-
 fetch("https://dog.ceo/api/breeds/image/random/21", requestOptions)
   .then((response) => response.json())
   .then((result) => showDogs(result))
   .catch((error) => erroShowAlert(error));
-
 container = document.querySelector(".container");
 const alert_content = document.querySelector("#alert-content");
-
 const showDogs = (result) => {
-
     for (let i = 0; i < result.message.length; i++) {
       const movieElement = document.createElement("div");
       movieElement.classList.add("col");
       movieElement.innerHTML = `
-
-        
             <div class="card">
             <img src=${result.message[i]} class="card-img-top" alt="image-dog" width="70px" height="340px">
                 <div class="card-body">
@@ -63,7 +53,6 @@ const showDogs = (result) => {
         `;
       main.appendChild(movieElement);
     }
-  
 };
 function erroShowAlert(error) {
   if(error) {
