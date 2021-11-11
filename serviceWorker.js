@@ -11,7 +11,6 @@ const _staticFiles = [
   "/images/alert-dog.png",
   "/css/style.css",
   "/js/app.js",
-  "/js/main.js",
 ];
 
 const _immutableFiles = [
