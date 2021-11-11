@@ -8,26 +8,13 @@ self.addEventListener("install", (installEvent) => {
   const saveStaticCache = caches
     .open(staticCache)
     .then((cache) => cache.addAll(_staticFiles));
-
-  const saveImmutableCache = caches
-    .open(immutableCache)
-    .then((cache) => cache.addAll(_immutableFiles));
-
-    installEvent.waitUntil(
-      Promise.all(
-        [
-          saveStaticCache, 
-          saveImmutableCache
-        ])
-    );
-
+  const saveImmutableCache = caches.open(immutableCache).then((cache) => cache.addAll(_immutableFiles));
+  installEvent.waitUntil( Promise.all([ saveStaticCache, saveImmutableCache]));
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys.map((key) => {
+    caches.keys().then((keys) => Promise.all(keys.map((key) => {
           if (!staticCache.includes(key) && !immutableCache.includes(key) ) {
             return caches.delete(key);
           }
@@ -50,7 +37,6 @@ self.addEventListener("fetch", (fetchEvent) => {
 })
 
 });
-
 //First cache with backup
 self.addEventListener('message',(msgClient) => {
     if(msgClient.data.action == 'skipWaiting'){
