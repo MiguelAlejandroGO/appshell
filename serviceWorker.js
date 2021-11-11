@@ -1,24 +1,8 @@
 let staticCache = 'staticCache_v1';
 let dynamicCache = 'dynamicCache_v1';
 let immutableCache = 'immutableCache_v1'; 
- 
-const _staticFiles = [
-  "/",
-  "/index.html",
-  "/images/dog_icon.svg",
-  "/images/alert-dog.png",
-  "/css/style.css",
-  "/js/main.js",
-];
-
-const _immutableFiles = [
-  "/css/bootstrap.min.css",
-  "/css/bootstrap.min.css.map",
-  "/js/jquery.js",
-  "/js/party.js",
-  "/js/bootstrap.bundle.min.js",
-  "/js/bootstrap.bundle.min.js.map"
-];
+const _staticFiles = ["/","/index.html","/images/dog_icon.svg","/images/alert-dog.png","/css/style.css","/js/main.js",];
+const _immutableFiles = ["/css/bootstrap.min.css","/css/bootstrap.min.css.map","/js/jquery.js","/js/party.js","/js/bootstrap.bundle.min.js","/js/bootstrap.bundle.min.js.map"];
 
 self.addEventListener("install", (installEvent) => {
   const saveStaticCache = caches
@@ -54,16 +38,6 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (fetchEvent) => {
-  //fetchEvent.respondWith(
-    //caches.match(fetchEvent.request).then((res) => {
-     // return (
-     //   res ||
-      //  fetch(fetchEvent.request).catch((error) =>
-       //   console.log("Error en la peticion")
-       // )
-     // );
-   // })
- // );
  const _result = caches.match(fetchEvent.request).then((cacheResponse) =>{
   return cacheResponse || fetch(fetchEvent.request).then(
     networkResponse => {
@@ -78,8 +52,6 @@ self.addEventListener("fetch", (fetchEvent) => {
 });
 
 //First cache with backup
-
-
 self.addEventListener('message',(msgClient) => {
     if(msgClient.data.action == 'skipWaiting'){
         self.skipWaiting();
