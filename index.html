@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="description" content="Un simple aplicación meteorológica" />
+
+  <!-- CODELAB: Add meta theme-color -->
+  <meta name="theme-color" content="#2F3BA2" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Description">
+  <meta name="keywords" content="Keywords">
+  <!-- Android  -->
+  <meta name="theme-color" content="red">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="Application Title">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/party.js"></script>
+
+  <title>Adopta Dog</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand mx-auto" href="#">
+        <span class="nav-logo"><img src="images/dog_icon.svg" class="img-fluid" width="98px">
+          <h3>Adopta un Dog</h3>
+        </span>
+      </a>
+    </div>
+  </nav>
+  <main class="container">
+    <div id="alert-content" class="alert-content d-none">
+      <img src="./images/alert-dog.png" alt="" srcset="">
+      <h5 class="text-center">Por el momento no hay perritos</h5>
+    </div>
+
+    <div id="main" class="row row-cols-1 row-cols-md-3 g-4 h-100">
+
+    </div>
+  </main>
+  <div id="snackbar">
+    <h5>Nueva version disponible. </h5><button id="lauchUpdate" class="btn btn-info">Actualizar</button>
+  </div>
+  <footer>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <p class="mt-4 text-center"><small>All rights reserved © AdoptaunDog Corporation 2021</small></p>
+        </div>
+
+      </div>
+    </section>
+
+  </footer>
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
