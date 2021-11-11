@@ -1,4 +1,3 @@
-
 let staticCache = 'staticCache_v1';
 let dynamicCache = 'dynamicCache_v1';
 let immutableCache = 'immutableCache_v1'; 
