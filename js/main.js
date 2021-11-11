@@ -54,7 +54,7 @@ const showDogs = (result) => {
 
         
             <div class="card">
-            <img src=${result.message[i]} class="card-img-top" alt="...">
+            <img src=${result.message[i]} class="card-img-top" alt="image-dog" width="75px" height="320px">
                 <div class="card-body">
                    <div class="button btn btn-info" onmousedown="party.confetti(this)">Adoptame!</div>
                 </div>
