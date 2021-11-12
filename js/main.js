@@ -1,3 +1,9 @@
+window.onload = function(){ 
+  setTimeout(function(){
+    document.querySelector(".preloader").style.display = "none"; 
+},5000);
+  
+}
 let newServiceWorker;
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
