@@ -1,7 +1,7 @@
 window.onload = function(){ 
   setTimeout(function(){
     document.querySelector(".preloader").style.display = "none"; 
-},5000);
+},3000);
   
 }
 let newServiceWorker;
