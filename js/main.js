@@ -50,7 +50,7 @@ const showDogs = (result) => {
       movieElement.classList.add("col");
       movieElement.innerHTML = `
             <div class="card">
-            <img src=${result.message[i]} class="card-img-top " alt="image-dog" width="70px" height="350px">
+            <img src=${result.message[i]} class="card-img-top " alt="image-dog" width="350px" height="350px">
                 <div class="card-body">
                    <div class="button btn btn-info" onmousedown="party.confetti(this)">Adoptame!</div>
                 </div>
